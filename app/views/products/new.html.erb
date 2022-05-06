@@ -1,0 +1,30 @@
+<h1>New Product</h1>
+
+<%= form_for @product do |f| %> 
+	<div>
+		<%= f.label :name %>
+	  	<%= f.text_field :name %>
+	</div><br>
+
+	<div>
+	  	<%= f.label :description %>
+	  	<%= f.text_field :description %>
+	</div><br>
+
+
+  	<%# Now comes the part for `Todo` object %>
+  	<%= f.fields_for :product_varients do |field| %>
+  		<div>
+	    	<%= field.label :color %>
+	    	<%= field.text_field :color %>
+	    </div><br>
+
+	    <div>
+	    	<%= field.label :size %>
+	    	<%= field.text_field :size %>
+	    </div><br>
+  	<% end %>
+
+  	<%= f.submit %>
+
+<% end %>

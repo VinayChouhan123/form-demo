@@ -1,0 +1,28 @@
+<h1>Students Lists</h1>
+
+<table width="50%">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>description</th>
+			<th>class</th>
+			<th>subject</th>
+			<th>medium</th>
+			<th>country</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @students.each do |student| %>
+			<tr>
+				<td><%= student.name %></td>
+				<td><%= student.description %></td>
+				<td><%= student.class_name %></td>
+				<td><%= student.subject.to_sentence %></td>
+				<td><%= student.medium %></td>
+				<td><%= student.country %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table><br>
+
+<%= link_to "Create Student", new_student_path(@student) %>

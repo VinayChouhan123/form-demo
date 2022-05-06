@@ -1,0 +1,20 @@
+<h1>Admins Lists</h1>
+
+<table width="30%">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @admins.each do |admin| %>
+			<tr>
+				<td><%= admin.name %></td>
+				<td><%= admin.email %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table><br>
+
+<%= link_to "Create Admin", new_admin_path(@admin) %>

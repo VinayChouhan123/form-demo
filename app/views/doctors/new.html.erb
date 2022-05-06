@@ -1,0 +1,22 @@
+<h1>New Doctor</h1>
+
+<%= simple_form_for @doctor do |form| %> 
+	<div>
+		<%= form.input :firstname, placeholder: 'First name', label: 'First name ', error: 'firstname is mandatory, please specify one' %>
+	</div><br>
+
+	<div>
+		<%= form.input :lastname, placeholder: 'last name', label: 'Last name ', hint: 'lastname is mandatory and ' %>
+	</div><br>
+
+	<div>
+		<%= form.input :email, placeholder: 'email', label: 'E-mail ' %>
+	</div><br>
+
+	<div>
+		<%= form.input :password, label: 'password', input_html: { minlength: 6, maxlength: 10 } %>
+	</div><br>
+
+	<%= form.button :submit %>
+
+<% end %>

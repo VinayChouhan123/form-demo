@@ -1,0 +1,17 @@
+<h1>New Admin</h1>
+
+<%= form_tag("/admins", :method => "post") do %>
+	<div>
+		<%= label_tag :name %><br>
+		<%= text_field_tag :'admin[name]' %>
+	</div><br>
+
+	<div>
+		<%= label_tag :email %><br>
+		<%= text_field_tag :'admin[email]' %>
+	</div><br>
+
+	<%= submit_tag("submit") %>
+
+<% end %>
+
